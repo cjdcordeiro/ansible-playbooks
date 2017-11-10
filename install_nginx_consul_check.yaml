@@ -12,7 +12,7 @@
       state: started
   - name: Run the command 
     shell: >
-      bin/echo "From SixSq: $(date)" >> /usr/share/nginx/html/index.html
+      /bin/echo "From SixSq: $(date)" >> /usr/share/nginx/html/index.html
   - name: register nginx with an http check
     consul:
       service_name: nginx
