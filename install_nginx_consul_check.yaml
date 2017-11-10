@@ -10,3 +10,11 @@
   - service:
       name: nginx
       state: started
+  - name: Run the command 
+    shell: /usr/bin/echo "From SixSq: $(date)" >> /usr/share/nginx/html/index.html
+  - name: register nginx with an http check
+    consul:
+      service_name: nginx
+      service_port: 80
+      interval: 60s
+      http: http://localhost:80/status
