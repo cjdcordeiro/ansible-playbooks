@@ -1,0 +1,11 @@
+- name: apt update
+  action: apt-get update
+
+- name: update apt repo
+  action: apt update-cache=yes
+
+- name: install nginx 
+  action: apt name=nginx state=installed
+
+- name: service nginx 
+  action: service name=nginx state=started 
