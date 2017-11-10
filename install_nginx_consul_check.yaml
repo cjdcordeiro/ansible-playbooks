@@ -1,10 +1,12 @@
 - hosts: localhost
   tasks:
-  - name: apt update
-    action: apt-get update
-  - name: update apt repo
-    action: apt update-cache=yes
-  - name: install nginx 
-    action: apt name=nginx state=installed
-  - name: service nginx 
-    action: service name=nginx state=started 
+  - name: Run the equivalent of "apt-get update" as a separate step
+    apt:
+      update_cache: yes
+  - name: Install the package "nginx"
+    apt:
+      name: nginx
+      state: present
+  - service:
+      name: nginx
+      state: started
