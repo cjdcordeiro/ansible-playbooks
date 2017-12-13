@@ -1,7 +1,5 @@
 - hosts: sixsq:!consul_servers
   sudo: yes
-  vars:
-    token: "{{ (lookup('file', '/opt/consul/consul.d/agent_config.json') | from_json).get('acl_agent_token') }}"
   tasks:
   - name: Run the equivalent of "apt-get update" as a separate step
     apt:
@@ -22,6 +20,6 @@
     consul:
       service_name: nginx
       service_port: 80
-      token: "{{ token }}"
+      token: "{{ agent_token }}"
       interval: 60s
       http: http://localhost:80
