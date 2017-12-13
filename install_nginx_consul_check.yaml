@@ -1,4 +1,5 @@
 - hosts: sixsq:!consul_servers
+  sudo: yes
   vars:
     token: "{{ (lookup('file', '/opt/consul/consul.d/agent_config.json') | from_json).get('acl_agent_token') }}"
   tasks:
