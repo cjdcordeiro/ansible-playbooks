@@ -21,6 +21,6 @@
     consul:
       service_name: nginx
       service_port: 80
-      token: {{ token }}
+      token: "{{ token }}"
       interval: 60s
       http: http://localhost:80
