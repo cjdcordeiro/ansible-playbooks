@@ -5,4 +5,4 @@
   tasks:
  
   - name: Hello World!
-    shell: echo {{ public_variable }} "Hi! Tower is working. Secrets are: " {{ vault }}
+    shell: echo {{ public_variable }} "Hi! Tower is working. Secrets are " {{ vault }}
