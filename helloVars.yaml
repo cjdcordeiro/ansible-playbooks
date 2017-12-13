@@ -1,6 +1,6 @@
 ---
 - name: Hello World!
-  hosts: sixsq:!consul_servers
+  hosts: all
  
   tasks:
  
