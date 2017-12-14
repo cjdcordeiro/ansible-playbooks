@@ -1,0 +1,17 @@
+---
+- name: Add Consul ACL
+  hosts: consul_servers
+ 
+  tasks:
+ 
+  - name: create acl
+    shell: >
+      curl -XPUT --header "X-Consul-Token: $acl_master_token" \
+        http://172.17.0.1:8500/v1/acl/create \
+        --data \
+        '{
+            "Name": "'`date +%N`'",
+            "Type": "client",
+            "Rules": "node \"\" { policy = \"write\" } service \"\" { policy = \"write\" }",
+            "ID": "{{ ACL_TOKEN }}" 
+        }'
