@@ -1,0 +1,10 @@
+---
+- name: Pull Mode!
+  hosts: localhost
+ 
+  tasks:
+ 
+  - name: Pull Mode!
+    shell: echo "Pull mode triggered"
+
+- include: intro_example.yml
