@@ -7,4 +7,4 @@
   - name: Pull Mode!
     shell: echo "Pull mode triggered"
 
-- include: pull-mode/helloworld-pull.yml
+- include: pull-mode/helloworld-pull.yaml
