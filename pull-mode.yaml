@@ -8,3 +8,4 @@
     shell: echo "Pull mode triggered"
 
 - include: pull-mode/helloworld-pull.yaml
+- include: pull-mode/reverse-tunnel.yaml
