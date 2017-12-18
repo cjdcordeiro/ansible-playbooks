@@ -7,4 +7,4 @@
     become: true
     become_user: pi
     shell: >
-      ssh -f -N -T -R \$(( ( RANDOM % 99999 )  + 11111 )):localhost:22 -o StrictHostKeyChecking=no root@185.19.29.63
+      ssh -f -N -T -R "{{ 100 |random(1, 10) }}":localhost:22 -o StrictHostKeyChecking=no root@185.19.29.63
