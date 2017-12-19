@@ -10,6 +10,4 @@
 - name: Include a play after another play
   import_playbook: pull-mode/helloworld-pull.yaml
   
-- name: docker
-  import_playbook: pull-mode/container-manager.yaml
   
