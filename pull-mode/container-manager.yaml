@@ -1,6 +1,6 @@
 ---
 - name: ansible docker management
-  hosts: rpi0-nbnano-new
+  hosts: localhost
   vars:
    container_name: ansiblecontainergrafana
   
@@ -8,12 +8,11 @@
   - name: Container is running
     docker_container:
       name: "{{ container_name }}"
-      state: present
+      state: started
       image: tobi312/rpi-nginx
       published_ports: 9999:80
       
   - name: show pubkey
-    when: result|succeeded
     shell: >
       docker cp /home/pi/.ssh/id_rsa "{{ container_name }}":/var/www/html/index.nginx-debian.html 
     
