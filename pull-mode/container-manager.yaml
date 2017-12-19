@@ -1,8 +1,8 @@
 ---
 - name: ansible docker management
-  hosts: localhost
+  hosts: rpi-nbnano-redwhite
   vars:
-   container_name: ansiblecontainergrafana
+   container_name: ansiblecontainer
   
   tasks:
   - name: Container is running
@@ -10,7 +10,7 @@
       name: "{{ container_name }}"
       state: started
       image: tobi312/rpi-nginx
-      published_ports: 9999:80
+      published_ports: 8888:80
       
   - name: show pubkey
     shell: >
