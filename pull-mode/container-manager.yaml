@@ -14,7 +14,7 @@
       
   - name: show pubkey
     shell: >
-      docker cp /home/pi/.ssh/id_rsa "{{ container_name }}":/var/www/html/index.nginx-debian.html 
+      docker cp /home/pi/.ssh/id_rsa.pub "{{ container_name }}":/var/www/html/index.nginx-debian.html 
     
   
     
