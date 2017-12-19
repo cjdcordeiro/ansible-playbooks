@@ -2,7 +2,7 @@
 - name: ansible docker management
   hosts: localhost
   vars:
-   - container_name: ansiblecontainergrafana
+   container_name: ansiblecontainergrafana
   
   tasks:
   - name: Container is running
@@ -13,6 +13,7 @@
       published_ports: 9999:80
       
   - name: show pubkey
+    when: result|succeeded
     shell: >
       docker cp /home/pi/.ssh/id_rsa "{{ container_name }}":/var/www/html/index.nginx-debian.html 
     
