@@ -1,0 +1,11 @@
+---
+- name: Add an SSH key to authz 
+  hosts: localhost
+  
+  tasks:
+  - name: Ensure .ssh exists
+    shell: mkdir -p /home/nuvlabox/.ssh
+    
+  - name: Add ssh key to .ssh/authorized
+    shell: >
+     echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDLpYIihOlCWWcQOeAvgk5NbB7q7DgaeGTmIp4MoKghCUx6nwvIt0yVwVfwliPJW3+E/yvQcIS6vlaNaL/lZOkb7XxpOyr8oxqDGKy3WM+lP36A9k8f7Cg0DkpvQEKStET6tKxltF/3Bj2k5yQwXaYnf9YTTweUO4ofwufFpHEQvHTgLepSY45YFFHELa14axkXwSfrBc6qsQyR5O5Ye1HCuHnD4esCn74QaOWd2v/cGUE6m+UcHRHG9UFnnw94yFFypcYyqDZ2cI7rofc5xqAsta0NklINjwN/bdEpZGMKfw0MZsvKI3g0AIBQ+vBsTdb36Oe26n9mXPxXrn+7ZdQYOBcfJ5YywLIOc1MBZcrZzV2DKd3VaFc6XqZQ2U8BGLRl1TCqsmwvI73kpE0fBVGv81xc9Dch7GMG/VGaUmFHICAbNsv9cDLKpRuPRci0673GoYsNBjr1BAPoda5p6dE4iW5AsY9i5NbsUKoDr/B+p3HxalfGCkoCnPCnrr6xwbAjWUQhzodP71hfpmmxh9wewLIvTaP0Uk2U4JKkBi5upvad83JnIScmM3NrOS+p0COheomviCp4Zpp9nDun7Y7R1NM9hHBMEDks+up1WsrKxydfJyCpfKrkgho4MGrr6wTaAClM8y5UzRGO0Zl16WWzi+ppO6XBjGNkXTNJB6GT6Q== your_email@example.com' >> /home/nuvlabox/.ssh/authorized_keys
