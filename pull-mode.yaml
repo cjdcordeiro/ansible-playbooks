@@ -13,5 +13,5 @@
 # - name: tunnel
 #   import_playbook: pull-mode/reverse-tunnel.yaml
 
-- name: Add an SSH key
-  import_playbook: pull-mode/add-ssh-key.yaml
+# - name: Add an SSH key
+#   import_playbook: pull-mode/add-ssh-key.yaml
