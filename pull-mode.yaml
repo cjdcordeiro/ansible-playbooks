@@ -1,6 +1,7 @@
 ---
 - name: Pull Mode!
- 
+  hosts: nuvlabox-nano
+  
   tasks:
  
   - name: Pull Mode!
