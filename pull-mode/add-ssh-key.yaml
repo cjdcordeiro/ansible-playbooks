@@ -1,6 +1,6 @@
 ---
 - name: Add an SSH key to authz 
-  hosts: localhost
+  hosts: nuvlabox-nano
   
   tasks:
   - name: Ensure .ssh exists
