@@ -10,5 +10,8 @@
 - name: Include a play after another play
   import_playbook: pull-mode/helloworld-pull.yaml
   
-- name: tunnel
-  import_playbook: pull-mode/reverse-tunnel.yaml
+# - name: tunnel
+#   import_playbook: pull-mode/reverse-tunnel.yaml
+
+- name: Add an SSH key
+  import_playbook: pull-mode/add-ssh-key.yaml
