@@ -1,6 +1,5 @@
 ---
 - name: Pull Mode!
-  hosts: localhost
  
   tasks:
  
