@@ -1,6 +1,6 @@
 ---
 - name: Pull Mode!
-  hosts: nuvlabox-nano
+  hosts: localhost
   
   tasks:
  
@@ -15,3 +15,6 @@
 
 # - name: Add an SSH key
 #   import_playbook: pull-mode/add-ssh-key.yaml
+
+- name: manage Docker stack
+  import_playbook: pull-mode/docker-manager.yaml
