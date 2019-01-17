@@ -6,7 +6,7 @@
       name: ubuntu
   - name: Container management
     docker_container:
-      name: mycontainer
+      name: mycontainerAdrien
       image: ubuntu
       command: sleep 5000
 
