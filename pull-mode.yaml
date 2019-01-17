@@ -4,5 +4,10 @@
   - name: Pull Ubuntu image latest
     docker_image:
       name: ubuntu
-
+  - name: Container management
+    docker_container:
+      name: mycontainer
+      state: present
+      image: ubuntu
+      command: sleep 5000
 
