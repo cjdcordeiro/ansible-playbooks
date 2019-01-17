@@ -7,7 +7,6 @@
   - name: Container management
     docker_container:
       name: mycontainer
-      state: present
       image: ubuntu
       command: sleep 5000
 
