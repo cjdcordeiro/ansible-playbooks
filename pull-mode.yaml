@@ -1,9 +1,13 @@
 ---
 - name: Pull Mode!
   hosts: localhost
-  
+
   tasks:
- 
+  - name: Add an SSH key
+    import_playbook: pull-mode/add-ssh-key.yaml
+
+  - name: manage Docker stack
+    import_playbook: pull-mode/docker-manager.yaml
 #   - name: Pull Mode!
 #     shell: echo "Pull mode triggered"
 
@@ -13,8 +17,4 @@
 # - name: tunnel
 #   import_playbook: pull-mode/reverse-tunnel.yaml
 
-    - name: Add an SSH key
-      import_playbook: pull-mode/add-ssh-key.yaml
 
-    - name: manage Docker stack
-      import_playbook: pull-mode/docker-manager.yaml
