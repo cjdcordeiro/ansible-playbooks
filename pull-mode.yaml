@@ -1,14 +1,14 @@
 ---
 - name: Pull Mode!
-  hosts: localhost
+  hosts: 89.145.166.10
   
   tasks:
  
-  - name: Pull Mode!
-    shell: echo "Pull mode triggered"
+#   - name: Pull Mode!
+#     shell: echo "Pull mode triggered"
 
-  - name: Include a play after another play
-    import_playbook: pull-mode/helloworld-pull.yaml
+#   - name: Include a play after another play
+#     import_playbook: pull-mode/helloworld-pull.yaml
   
 # - name: tunnel
 #   import_playbook: pull-mode/reverse-tunnel.yaml
