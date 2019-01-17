@@ -1,6 +1,7 @@
 ---
 
 - name: pull an image
+  hosts: localhost
   docker_image:
     name: centos
     
