@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
   tasks:
-  - name: Pull Ubuntu image
+  - name: Pull Ubuntu image latest
     docker_image:
       name: ubuntu
 
