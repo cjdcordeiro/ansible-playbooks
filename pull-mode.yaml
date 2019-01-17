@@ -1,6 +1,6 @@
 ---
 - name: Pull Mode!
-  hosts: 89.145.166.10
+  hosts: localhost
   
   tasks:
  
