@@ -4,6 +4,7 @@
   
   tasks:
   - name: check nuvla https TLS end date
-    command: [ $(date --date="$(echo -n | openssl s_client -servername nuvla.io -connect nuvla.io:443 2>/dev/null | openssl x509 -enddate -noout -checkend 0 | cut -d= -f 2)" +%s) -gt $(date -u +%s) ]
+    shell: >
+    [ $(date --date="$(echo -n | openssl s_client -servername nuvla.io -connect nuvla.io:443 2>/dev/null | openssl x509 -enddate -noout -checkend 0 | cut -d= -f 2)" +%s) -gt $(date -u +%s) ]
 
 
