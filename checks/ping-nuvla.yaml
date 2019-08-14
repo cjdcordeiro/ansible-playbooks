@@ -4,6 +4,5 @@
 
   tasks:
   - name: ping nuvla.io
-    net_ping:
-      dest: nuvla.io
+    command: ping -c 1 -W 5 nuvla.io
     
