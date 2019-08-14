@@ -15,3 +15,9 @@
       chdir: /tmp
     when: contents.stat.exists == False
 
+  - name: pull new changes
+    shell: >
+      git pull
+    args:
+      chdir: /tmp/deployment
+    when: contents.stat.exists == True
