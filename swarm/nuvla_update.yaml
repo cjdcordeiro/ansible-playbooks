@@ -16,6 +16,7 @@
     docker_stack:
       name: demo
       state: present
+      prune: yes
       compose:
         - /tmp/deployment/demo/docker-compose.yml
 
