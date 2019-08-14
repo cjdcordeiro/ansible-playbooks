@@ -3,6 +3,9 @@
   hosts: managers
 
   tasks:
+  - name: install jsondiff and pyyaml
+    command: pip install jsondiff pyyaml
+
   - name: update Nuvla stack
     docker_stack:
       name: demo
