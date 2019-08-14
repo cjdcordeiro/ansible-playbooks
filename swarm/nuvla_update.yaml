@@ -3,6 +3,10 @@
   hosts: managers
 
   tasks:
+  - name: Install pip
+    apt:
+      name: python-pip
+
   - pip:
       name:
         - jsondiff
