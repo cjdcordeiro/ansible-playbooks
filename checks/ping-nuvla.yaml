@@ -1,0 +1,9 @@
+---
+- name: Nuvla Ping
+  hosts: localhost
+
+  tasks:
+  - name: ping nuvla.io
+    net_ping:
+      dest: nuvla.io
+    
