@@ -1,0 +1,12 @@
+---
+- name: Nuvla Update
+  hosts: managers
+
+  tasks:
+  - name: update Nuvla stack
+    docker_stack:
+      name: demo
+      state: present
+      compose:
+        - /tmp/deployment/demo/docker-compose.yml
+

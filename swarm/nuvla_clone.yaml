@@ -1,0 +1,11 @@
+---
+- name: Nuvla clone
+  hosts: managers
+
+  tasks:
+  - name: get latest compose file
+    chdir: /tmp
+    shell: >
+      git clone --single-branch --branch test-cm https://github.com/nuvla/deployment.git
+    
+
