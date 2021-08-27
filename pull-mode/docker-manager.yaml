@@ -1,5 +1,3 @@
----
-
 - name: pull an image
   community.docker.docker_image:
     name: centos
