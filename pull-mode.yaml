@@ -4,6 +4,7 @@
   - name: Pull Ubuntu image latest
     docker_image:
       name: ubuntu
+      source: pull
   - name: Container management
     docker_container:
       name: mycontainerAdrien
